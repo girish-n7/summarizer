@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Home({ updateSummary }) {
-  let url = "http://localhost:3000/";
+  let url = ""; //call api to fecth summary
   const navigate = useNavigate();
 
   const [input, setInput] = React.useState({
