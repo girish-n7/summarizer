@@ -26,6 +26,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -310,7 +311,10 @@ footer a {
     flex-direction: column;
     height: fit-content;
     padding-top: 20px;
-    z-index: 2;
+  }
+
+  .header--title {
+    margin: 0;
   }
 
   .header--nav {
@@ -343,7 +347,10 @@ footer a {
     flex-direction: column;
     height: fit-content;
     padding-top: 20px;
-    z-index: 2;
+  }
+
+  .header--title {
+    margin: 0;
   }
 
   .header--nav {
