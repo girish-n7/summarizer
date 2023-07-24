@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import light from "../assets/lightMode.svg";
+import dark from "../assets/darkMode.svg";
+import logoLightMode from "../assets/logoLightMode.svg";
+import logoDarkMode from "../assets/logoDarkMode.svg";
 
 export default function Header() {
   const [darkTheme, setDarkTheme] = React.useState(false);
@@ -19,18 +23,25 @@ export default function Header() {
 
   return (
     <header className="header--container">
-      <p>
-        <Link className="header--title" to="/">
-          Summarizer
-        </Link>
-      </p>
+      <div className="header--main">
+        <img
+          src={darkTheme ? logoDarkMode : logoLightMode}
+          className="header--logo"
+          alt=""
+        ></img>
+        <p>
+          <Link className="header--title" to="/">
+            Summarizer
+          </Link>
+        </p>
+      </div>
+
       <div className="header--nav">
-        <i
-          className={`fa-solid fa-${
-            darkTheme ? "lightbulb" : "moon"
-          } fa-lg theme`}
+        <img
+          src={darkTheme ? light : dark}
+          className="theme"
           onClick={handleClick}
-        ></i>
+        ></img>
         <p>
           <Link className="nav--item" to="/">
             Home

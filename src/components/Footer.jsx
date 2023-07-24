@@ -1,7 +1,10 @@
-// import React from "react";
+import userLogo from "../assets/user.svg";
+import linkedInLogo from "../assets/linkedin.svg";
+import gitHubLogo from "../assets/github.svg";
+import emailLogo from "../assets/email.svg";
 
 export default function Footer() {
-  const portfolio = "";
+  const portfolio = "https://girish-n7.github.io/portfolio/";
   const gitHub = "https://github.com/girish-n7";
   const linkedIn = "https://www.linkedin.com/in/girish-n-7075ba1a4";
   const email = "mailto: ngirish1729@gmail.com";
@@ -11,16 +14,16 @@ export default function Footer() {
       <p className="footer--content">
         © 2023. Made by Girish N{" "}
         <a href={portfolio} title="Portfolio">
-          <i className="fa-solid fa-user fa-lg icon"></i>
+          <img src={userLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={linkedIn} title="LinkedIn">
-          <i className="fa-brands fa-linkedin-in fa-lg icon"></i>
+          <img src={linkedInLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={gitHub} title="GitHub">
-          <i className="fa-brands fa-github fa-lg icon"></i>
+          <img src={gitHubLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={email} title="email">
-          <i className="fa-solid fa-envelope fa-lg icon"></i>
+          <img src={emailLogo} className="footer--logo" alt=""></img>
         </a>
       </p>
     </footer>
