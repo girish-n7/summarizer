@@ -33,7 +33,7 @@ export default function App() {
         <Route
           exact
           path="/summary"
-          element={<Summary article={summary} />}
+          element={<Summary summaryObject={summary} />}
         ></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/help" element={<Help />}></Route>

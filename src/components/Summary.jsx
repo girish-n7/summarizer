@@ -2,12 +2,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-export default function Summary({ article }) {
-  const summaryList = article.summary.map((list) => {
+export default function Summary({ summaryObject }) {
+  const summaryList = summaryObject.summary.map((list) => {
     return <li>{list}</li>;
   });
 
-  const authorsList = article.article_authors.map((author) => {
+  const authorsList = summaryObject.article_authors.map((author) => {
     return `${author}, `;
   });
 
@@ -17,21 +17,21 @@ export default function Summary({ article }) {
     setOriginalArticle((prevState) => !prevState);
   }
 
-  return article.key === 1 ? (
+  return summaryObject.key === 1 ? (
     <div className="summary--container">
       <p>Invalid URL</p>
     </div>
   ) : (
     <div className="summary--container">
       <p>
-        <b>Article Title:</b> {article.article_title}
+        <b>Article Title:</b> {summaryObject.article_title}
       </p>
-      {article.article_pub_date && (
+      {summaryObject.article_pub_date && (
         <p>
-          <b>Published:</b> {article.article_pub_date}
+          <b>Published:</b> {summaryObject.article_pub_date}
         </p>
       )}
-      {article.article_authors && (
+      {summaryObject.article_authors && (
         <p>
           <b>Authors:</b> {authorsList}
         </p>
@@ -52,11 +52,11 @@ export default function Summary({ article }) {
       {originalArticle && (
         <div>
           <div className="article--img">
-            <img src={article.article_image} alt="" />
+            <img src={summaryObject.article_image} alt="" />
           </div>
           <p>
             <b>Original Article: </b>
-            {article.article_text}
+            {summaryObject.article_text}
           </p>
         </div>
       )}
