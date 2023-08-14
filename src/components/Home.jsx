@@ -2,15 +2,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import FetchSummary from "./FetchSummary";
 
 export default function Home({ updateSummary }) {
-  let url = ""; //call api to fecth summary
   const navigate = useNavigate();
 
   const [input, setInput] = React.useState({
     url: "",
     num_sentences: 5,
   });
+
+  //update inputs req for summary using useState
 
   function inputChange(event) {
     const { name, value } = event.target;
@@ -20,19 +22,12 @@ export default function Home({ updateSummary }) {
     }));
   }
 
+  //call backend service to fetch summary
+
   function handleSubmit(event) {
     event.preventDefault();
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        url: input.url,
-        num_sentences: input.num_sentences,
-      }),
-      redirect: "follow",
-    })
+
+    FetchSummary(input)
       .then((response) => response.json())
       .then((result) => updateSummary(result))
       .catch((error) => console.log(error));
@@ -46,7 +41,7 @@ export default function Home({ updateSummary }) {
         <div className="input--options">
           <input
             className="input--url"
-            type="url"
+            type="url/text"
             name="url"
             value={input.url}
             placeholder="http://www.example.com/index.html"
