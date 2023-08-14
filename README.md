@@ -41,7 +41,7 @@ Work in progress.</p><h2>Improvements</h2>
 <li>Optimise the api call time.</li>
 </ul><h2>Features that can be added</h2>
 <hr><ul>
-<li>Ability to paste the actual text instead of the link to get the summary</li>
+<li>.</li>
 </ul><h2>Acknowledgement</h2>
 <hr><ul>
 <li>I usually read articles to be updated with what's happening in the world but nowadays no website actually provides concise news about the topic. People spend most of their time scrolling through unnecessary paragraphs before they actually get to the main topic of the article.
