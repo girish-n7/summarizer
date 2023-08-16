@@ -41,10 +41,10 @@ export default function Home({ updateSummary }) {
         <div className="input--options">
           <input
             className="input--url"
-            type="url/text"
+            type="text"
             name="url"
             value={input.url}
-            placeholder="http://www.example.com/index.html"
+            placeholder="Paste your text here"
             autoFocus
             onChange={inputChange}
           ></input>
