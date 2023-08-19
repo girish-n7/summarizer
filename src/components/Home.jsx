@@ -36,7 +36,7 @@ export default function Home({ updateSummary }) {
 
   return (
     <div className="home--container">
-      <p className="input--prompt">Paste the article's url to summarize</p>
+      <p className="input--prompt">Paste the text to summarize</p>
       <form action="" onSubmit={handleSubmit}>
         <div className="input--options">
           <input

@@ -233,9 +233,23 @@ button:hover,
   padding: 1.5% 5%;
 }
 
+.help--instructions__bold {
+  font-weight: bold;
+}
+
 .help--hr {
   border: 1px var(--accent) solid;
   margin: 10px auto;
+}
+
+.help--disclaimer {
+  font-size: 1rem;
+  max-width: 50vw;
+  padding: 10px 20px;
+}
+
+.disclaimer--head {
+  font-weight: bold;
 }
 
 /* contact */
