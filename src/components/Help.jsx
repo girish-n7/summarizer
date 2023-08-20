@@ -2,7 +2,7 @@ export default function Help() {
   return (
     <div className="help--container">
       <p className="help--head">
-        Here&#8217;s how to use Summarizer to get the summary of any article you
+        Here&#8217;s how to use Summarizer to get the summary of any text you
         want: <hr className="help--hr" />
       </p>
       <ol className="help--instructions">
