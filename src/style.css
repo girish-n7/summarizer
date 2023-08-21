@@ -100,7 +100,7 @@ a {
   border-radius: 7.5px;
 }
 
-.input--url,
+.input--text,
 .input--sentences {
   font-size: 1.2rem;
   width: 90%;
@@ -110,7 +110,7 @@ a {
   padding: 5px;
 }
 
-.input--url:focus,
+.input--text:focus,
 .input--sentences:focus {
   outline: none;
   border: 2px solid var(--accent);
@@ -190,18 +190,6 @@ button:hover,
 .summary--hr {
   margin: 10px 0;
   border: 1px solid var(--accent);
-}
-
-.article--img {
-  height: 300px;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.article--img > img {
-  height: 100%;
 }
 
 /* help */

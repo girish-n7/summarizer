@@ -1,32 +1,23 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-// import React from "react";
+import React from "react";
 
 export default function Summary({ summaryObject }) {
   // const summaryList = summaryObject.summary.map((list) => {
   //   return <li>{list}</li>;
   // });
 
-  // const authorsList = summaryObject.article_authors.map((author) => {
-  //   return `${author}, `;
-  // });
+  const [originalText, setOriginalText] = React.useState(false);
 
-  // const [originalArticle, setOriginalArticle] = React.useState(false);
-
-  // function handleClick() {
-  //   setOriginalArticle((prevState) => !prevState);
-  // }
+  function handleClick() {
+    setOriginalText((prevState) => !prevState);
+  }
 
   return (
     <div className="summary--container">
-      {/* <p>
-        <b>Article Title:</b> {summaryObject.article_title}
+      <p>
+        <b>Reduction Percentage:</b> {summaryObject.reduction_percentage}
       </p>
-      {summaryObject.article_pub_date && (
-        <p>
-          <b>Published:</b> {summaryObject.article_pub_date}
-        </p>
-      )} */}
       {/* {summaryObject.article_authors && (
         <p>
           <b>Authors:</b> {authorsList}
@@ -40,22 +31,17 @@ export default function Summary({ summaryObject }) {
         <ul>{summaryObject.summary}</ul>
       </div>
       <hr className="summary--hr" />
-      {/* <div className="summary--button">
+      <div className="summary--button">
         <button onClick={handleClick}>
-          {originalArticle ? "Hide" : "Show"} Original Article
+          {originalText ? "Hide" : "Show"} Original Text
         </button>
-      </div> */}
-      {/* {originalArticle && (
-        <div>
-          <div className="article--img">
-            <img src={summaryObject.article_image} alt="" />
-          </div>
-          <p>
-            <b>Original Article: </b>
-            {summaryObject.article_text}
-          </p>
-        </div>
-      )} */}
+      </div>
+      <div>
+        <p>
+          <b>Original Text: </b>
+          {summaryObject.original_text}
+        </p>
+      </div>
     </div>
   );
 }

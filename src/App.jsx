@@ -10,11 +10,10 @@ import Error from "./components/Error";
 
 export default function App() {
   const [summary, setSummary] = React.useState({
-    article_title: "Please wait...",
-    article_pub_date: "Please wait...",
-    summary: ["Please wait..."],
-    article_authors: "Please wait...",
-    article_text: "",
+    summary: "Please wait ...",
+    original_text: "Please wait ...",
+    reduction_percentage: "Please wait ...",
+    sentiment: "Please wait ...",
   });
 
   function updateSummary(newSummary) {

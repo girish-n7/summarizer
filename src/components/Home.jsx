@@ -8,7 +8,7 @@ export default function Home({ updateSummary }) {
   const navigate = useNavigate();
 
   const [input, setInput] = React.useState({
-    url: "",
+    text: "",
     num_sentences: 5,
   });
 
@@ -40,11 +40,12 @@ export default function Home({ updateSummary }) {
       <form action="" onSubmit={handleSubmit}>
         <div className="input--options">
           <input
-            className="input--url"
+            className="input--text"
             type="text"
-            name="url"
-            value={input.url}
+            name="text"
+            value={input.text}
             placeholder="Paste your text here"
+            required
             autoFocus
             onChange={inputChange}
           ></input>
