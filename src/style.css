@@ -100,10 +100,20 @@ a {
   border-radius: 7.5px;
 }
 
+.input--sentence__prompt {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
 .input--text,
 .input--sentences {
   font-size: 1.2rem;
-  width: 90%;
+  width: 95%;
   margin: 10px auto;
   border: 2px solid rgba(128, 128, 128, 0.425);
   border-radius: 7.5px;
@@ -116,12 +126,8 @@ a {
   border: 2px solid var(--accent);
 }
 
-.input--sentence__prompt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  font-size: 1.2rem;
+.input--sentences {
+  width: 70%;
 }
 
 .sentence--prompt {
@@ -131,6 +137,31 @@ a {
 
 .sentence--selector {
   width: 10%;
+}
+
+.input--method {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.input--method__button {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.input--method__button:checked {
+  border: 6px solid var(--accent);
 }
 
 .input--button,

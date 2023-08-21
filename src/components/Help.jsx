@@ -46,7 +46,7 @@ export default function Help() {
           </span>
           <br />
           The summarization provided by this app is generated through automated
-          algorithms. While our utmost effort has been dedicated to ensuring the
+          algorithms. While utmost effort has been dedicated to ensuring the
           accuracy and correctness of the summaries, it&#8217;s important to
           note that the output might not always reflect nuanced or complex
           details present in the original text. The summaries should be used as

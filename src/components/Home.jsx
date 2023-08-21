@@ -10,6 +10,7 @@ export default function Home({ updateSummary }) {
   const [input, setInput] = React.useState({
     text: "",
     num_sentences: 5,
+    selectedMethod: "frequencyMethod",
   });
 
   //update inputs req for summary using useState
@@ -59,9 +60,36 @@ export default function Home({ updateSummary }) {
                 type="number"
                 name="num_sentences"
                 value={input.num_sentences}
+                min="3"
+                max="9"
                 onChange={inputChange}
               ></input>
             </div>
+          </div>
+          <div className="input--method">
+            <p>Select Method:</p>
+            <label>
+              <input
+                type="radio"
+                className="input--method__button"
+                name="selectedMethod"
+                value="frequencyMethod"
+                onChange={inputChange}
+                checked={input.selectedMethod === "frequencyMethod"}
+              />
+              Frequency Method
+            </label>
+            <label>
+              <input
+                type="radio"
+                className="input--method__button"
+                name="selectedMethod"
+                value="textRankMethod"
+                onChange={inputChange}
+                checked={input.selectedMethod === "textRankMethod"}
+              />
+              Text Rank Method
+            </label>
           </div>
         </div>
         <div className="input--button">

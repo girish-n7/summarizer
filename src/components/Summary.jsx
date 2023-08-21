@@ -37,10 +37,12 @@ export default function Summary({ summaryObject }) {
         </button>
       </div>
       <div>
-        <p>
-          <b>Original Text: </b>
-          {summaryObject.original_text}
-        </p>
+        {originalText && (
+          <p>
+            <b>Original Text: </b>
+            {summaryObject.original_text}
+          </p>
+        )}
       </div>
     </div>
   );
