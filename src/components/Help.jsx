@@ -7,35 +7,58 @@ export default function Help() {
       </p>
       <ol className="help--instructions">
         <li>
-          <span className="help--instructions__bold">Input Text:</span> Paste
+          <span className="help--instructions__bold">Input Text: </span> Paste
           the text into the provided area.
           <br />
         </li>
         <li>
+          <span className="help--instructions__bold">Choose Method: </span>
+          Select your preferred summarization method: <br />
+          <ul>
+            <li>
+              Frequency Method: Highlights sentences with most frequent words.
+            </li>
+            <li>
+              Text Rank Method: Analyzes text structure to identify key
+              sentences.
+            </li>
+          </ul>
+        </li>
+        <li>
           <span className="help--instructions__bold">
-            Choose Summary Length:
-          </span>{" "}
+            Choose Summary Length:{" "}
+          </span>
           Select the number of sentences for the summary.
           <br />
         </li>
         <li>
-          <span className="help--instructions__bold">Generate Summary:</span>{" "}
+          <span className="help--instructions__bold">Generate Summary: </span>
           Click &#34;Summarize&#34; to get the summary.
           <br />
         </li>
         <li>
-          <span className="help--instructions__bold">View Summary:</span> Read
-          the concise summary provided.
+          <span className="help--instructions__bold">View Summary: </span>
+          Read the concise summary provided.
           <br />
         </li>
         <li>
-          <span className="help--instructions__bold">Copy Summary:</span> Select
-          and copy the summary for your use.
+          <span className="help--instructions__bold">Copy Summary: </span>
+          Select and copy the summary for your use.
           <br />
         </li>
         <li>
-          <span className="help--instructions__bold">Done:</span> Enjoy quick
-          and effective text summaries!
+          <span className="help--instructions__bold">Note on Accuracy: </span>
+          Summaries may not capture all details.
+          <br />
+        </li>
+        <li>
+          <span className="help--instructions__bold">Use Wisely: </span>
+          Ideal for quick insights, not for critical decisions.
+          <br />
+        </li>
+        <li>
+          <span className="help--instructions__bold">Done: </span>
+          Enjoy quick and effective text summaries!
           <br />
         </li>
       </ol>

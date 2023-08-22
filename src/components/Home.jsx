@@ -67,7 +67,13 @@ export default function Home({ updateSummary }) {
             </div>
           </div>
           <div className="input--method">
-            <p>Select Method:</p>
+            <p>Select Method</p>
+            <p
+              className="input--method__info"
+              title="See How to use section for more info"
+            >
+              ?
+            </p>
             <label>
               <input
                 type="radio"

@@ -146,6 +146,20 @@ a {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  align-items: center;
+}
+
+.input--method * {
+  margin: 0 5px;
+}
+
+.input--method__info {
+  height: fit-content;
+  aspect-ratio: 1/1;
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: bold;
+  cursor: help;
 }
 
 .input--method__button {
@@ -158,6 +172,7 @@ a {
   border: 2px solid #999;
   transition: 0.2s all linear;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .input--method__button:checked {
@@ -228,8 +243,7 @@ button:hover,
 .help--container {
   height: fit-content;
   width: fit-content;
-  margin: 150px auto;
-  margin-bottom: 0;
+  margin: 120px auto;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -374,14 +388,18 @@ footer a {
     width: 90%;
   }
 
+  .summary--container {
+    margin: 200px auto;
+  }
+
   .help--container,
   .contact--container {
     width: 70vw;
     margin: 200px auto;
   }
 
-  .contact--container {
-    margin: 200px auto;
+  .help--disclaimer {
+    max-width: 70vw;
   }
 }
 
@@ -406,9 +424,17 @@ footer a {
     text-align: center;
   }
 
+  .summary--container {
+    margin: 200px auto;
+  }
+
   .help--container {
     width: 75vw;
     margin: 200px auto;
+  }
+
+  .help--disclaimer {
+    max-width: 75vw;
   }
 
   .contact--container {
@@ -419,5 +445,9 @@ footer a {
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .help--container {
     width: 80vw;
+  }
+
+  .help--disclaimer {
+    max-width: 80vw;
   }
 }
