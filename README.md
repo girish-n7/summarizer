@@ -32,9 +32,27 @@
 
 <h5>Steps</h5>
     <ul>
-        <li>Use gh repo clone girish-n7/summarizer command to clone this repo (or) download as zip.</li>
-        <li>Use npm install command to install the dependencies once the repo is cloned.</li>
-        <li>Use npm run dev command to run the service on your localhost.</li>
+        <li>Use 
+            ```bash
+
+            gh repo clone girish-n7/summarizer
+
+            ```
+            command to clone this repo (or) download as zip.</li>
+        <li>Use
+            ```bash
+
+            npm install
+
+            ```
+            command to install the dependencies once the repo is cloned.</li>
+        <li>Use
+            ```bash
+
+            npm run dev
+
+            ```
+            command to run the service on your localhost.</li>
         <li>The service will usually be hosted on http://localhost:5173/</li>
     </ul>
 
