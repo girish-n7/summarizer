@@ -19,7 +19,7 @@ A simple web service to get the summary of any text you want. Enjoy quick and ef
   - TextRank based algorithm: While this approach costs more in terms of time complexity,
     it is better for getting the summary of things like newspaper articles and essays.
 - View the reduction percentage.
-- View the Original Text to compare.
+- Option to view the Original Text to compare.
 
 ## Setup
 
