@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Routes>
+      <Routes key={location.pathname}>
         <Route
           exact
           path="/"
