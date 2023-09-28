@@ -1,43 +1,43 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import Help from "./components/Help";
-import Summary from "./components/Summary";
-import Error from "./components/Error";
+import { useState, useEffect } from "react";
+import SwitchPage from "./components/SwitchPage";
 
 export default function App() {
-  const [summary, setSummary] = React.useState({
+  //create default values for the summary page to use
+  let [summary, setSummary] = useState({
     summary: "Please wait ...",
     original_text: "Please wait ...",
     reduction_percentage: "Please wait ...",
-    sentiment: "Please wait ...",
   });
 
+  // theme
+  let [darkTheme, setDarkTheme] = useState(false);
+
+  //toggle theme
+  function handleTheme() {
+    return setDarkTheme((prevState) => !prevState);
+  }
+
+  //set the properties in the root div to change theme
+  const theme = document.querySelector(":root").style;
+
+  useEffect(() => {
+    theme.setProperty("--text", darkTheme ? "#ebeefa" : "#0a1024");
+    theme.setProperty("--background", darkTheme ? "#242425" : "#ebeefa");
+    theme.setProperty("--primary-button", darkTheme ? "#b598f1" : "#8b66e8");
+    theme.setProperty("--accent", darkTheme ? "#cfb9f6" : "#9831b4");
+  });
+
+  //to update the summary on receiving response from backend
   function updateSummary(newSummary) {
     setSummary(newSummary);
   }
 
   return (
     <div>
-      <Header />
-      <Routes key={location.pathname}>
-        <Route
-          exact
-          path="/"
-          element={<Home updateSummary={updateSummary} />}
-        ></Route>
-        <Route
-          exact
-          path="/summary"
-          element={<Summary summaryObject={summary} />}
-        ></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/help" element={<Help />}></Route>
-        <Route exact path="*" element={<Error />}></Route>
-      </Routes>
+      <Header darkTheme={darkTheme} handleTheme={handleTheme} />
+      <SwitchPage summary={summary} updateSummary={updateSummary} />
       <Footer />
     </div>
   );
