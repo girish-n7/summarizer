@@ -4,7 +4,7 @@ import gitHubLogo from "../assets/github.svg";
 import emailLogo from "../assets/email.svg";
 
 export default function Footer() {
-  const portfolio = "https://girish-n7.github.io/portfolio/";
+  const portfolio = "https://girish-n7.github.io/portfolio_v2/";
   const gitHub = "https://github.com/girish-n7";
   const linkedIn = "https://www.linkedin.com/in/girish-n-7075ba1a4";
   const email = "mailto: ngirish1729@gmail.com";

@@ -62,6 +62,7 @@ export default function Help() {
           <br />
         </li>
       </ol>
+      <hr className="summary--hr" />
       <div className="help--disclaimer">
         <p>
           <span className="disclaimer--head">

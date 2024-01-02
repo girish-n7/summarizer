@@ -28,11 +28,14 @@ export default function Home({ updateSummary }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    FetchSummary(input)
-      .then((response) => response.json())
-      .then((result) => updateSummary(result))
-      .catch((error) => console.log(error));
-    navigate("/summary");
+    input.text.length > 50 &&
+      FetchSummary(input)
+        .then((response) => response.json())
+        .then((result) => {
+          updateSummary(result);
+          navigate("/summary");
+        })
+        .catch((error) => console.log(error));
   }
 
   return (

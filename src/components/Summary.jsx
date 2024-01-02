@@ -27,9 +27,7 @@ export default function Summary({ summaryObject }) {
       <p>
         <b>Summary: </b>
       </p>
-      <div className="list--container">
-        <ul>{summaryObject.summary}</ul>
-      </div>
+      <div className="list--container">{summaryObject.summary}</div>
       <hr className="summary--hr" />
       <div className="summary--button">
         <button onClick={handleClick}>

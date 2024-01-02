@@ -43,7 +43,7 @@ button:hover,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 0;
+  padding: 1rem 0;
   border-bottom: 2px var(--accent) solid;
 }
 
@@ -214,8 +214,7 @@ button:hover,
 }
 
 .list--container {
-  padding: 5px 30px;
-  padding-right: 0;
+  padding: 5px 0;
 }
 
 .summary--hr {
@@ -263,7 +262,7 @@ button:hover,
 .help--disclaimer {
   font-size: 1rem;
   max-width: 50vw;
-  padding: 10px 20px;
+  padding: 5px;
 }
 
 .disclaimer--head {
@@ -277,7 +276,7 @@ button:hover,
   width: 300px;
   margin: 150px auto;
   margin-bottom: 0;
-  padding: 15px 20px;
+  padding: 15px 25px;
   border: 2px var(--accent) solid;
   border-radius: 5px;
   display: flex;
@@ -365,7 +364,7 @@ footer a {
   }
 
   .header--nav {
-    margin: 30px 0;
+    margin: 20px 0 5px 0;
   }
 
   .nav--item {
@@ -379,17 +378,21 @@ footer a {
   }
 
   .summary--container {
+    width: 90%;
     margin: 200px auto;
   }
 
-  .help--container,
+  .help--container {
+    width: 80%;
+    margin: 200px auto;
+  }
+
   .contact--container {
-    width: 70vw;
     margin: 200px auto;
   }
 
   .help--disclaimer {
-    max-width: 70vw;
+    max-width: 90vw;
   }
 }
 
@@ -409,7 +412,7 @@ footer a {
   }
 
   .header--nav {
-    margin: 30px 0;
+    margin: 20px 0 5px 0;
   }
 
   .nav--item {
@@ -423,12 +426,13 @@ footer a {
   }
 
   .help--container {
-    width: 75vw;
+    width: 85vw;
     margin: 200px auto;
+    padding: 5px;
   }
 
   .help--disclaimer {
-    max-width: 75vw;
+    max-width: 85vw;
   }
 
   .contact--container {
