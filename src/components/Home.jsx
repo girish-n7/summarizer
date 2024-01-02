@@ -38,70 +38,67 @@ export default function Home({ updateSummary }) {
   return (
     <div className="home--container">
       <p className="input--prompt">Paste the text to summarize</p>
-      <form action="" onSubmit={handleSubmit}>
-        <div className="input--options">
-          <input
-            className="input--text"
-            type="text"
-            name="text"
-            value={input.text}
-            placeholder="Paste your text here"
-            required
-            autoFocus
-            onChange={inputChange}
-          ></input>
-          <div className="input--sentence__prompt">
-            <div className="sentence--prompt">
-              <p>How many sentences do you want?</p>
-            </div>
-            <div className="sentence--selector">
-              <input
-                className="input--sentences"
-                type="number"
-                name="num_sentences"
-                value={input.num_sentences}
-                min="3"
-                max="9"
-                onChange={inputChange}
-              ></input>
-            </div>
-          </div>
-          <div className="input--method">
-            <p>Select Method</p>
-            <p
-              className="input--method__info"
-              title="See How to use section for more info"
-            >
-              ?
-            </p>
-            <label>
-              <input
-                type="radio"
-                className="input--method__button"
-                name="selectedMethod"
-                value="frequencyMethod"
-                onChange={inputChange}
-                checked={input.selectedMethod === "frequencyMethod"}
-              />
-              Frequency Method
-            </label>
-            <label>
-              <input
-                type="radio"
-                className="input--method__button"
-                name="selectedMethod"
-                value="textRankMethod"
-                onChange={inputChange}
-                checked={input.selectedMethod === "textRankMethod"}
-              />
-              Text Rank Method
-            </label>
+      <div className="input--options">
+        <textarea
+          className="input--text"
+          rows={3}
+          type="text"
+          name="text"
+          value={input.text}
+          placeholder="Paste your text here"
+          required
+          autoFocus
+          onChange={inputChange}
+        ></textarea>
+        <div className="input--sentence__prompt">
+          <p className="sentence--prompt">How many sentences do you want?</p>
+          <div className="sentence--selector">
+            <input
+              className="input--sentences"
+              type="number"
+              name="num_sentences"
+              value={input.num_sentences}
+              min="3"
+              max="9"
+              onChange={inputChange}
+            ></input>
           </div>
         </div>
-        <div className="input--button">
-          <button type="submit">SUMMARIZE</button>
+        <div className="input--method">
+          <p>Select Method</p>
+          <p
+            className="input--method__info"
+            title="See How to use section for more info"
+          >
+            ?
+          </p>
+          <label>
+            <input
+              type="radio"
+              className="input--method__button"
+              name="selectedMethod"
+              value="frequencyMethod"
+              onChange={inputChange}
+              checked={input.selectedMethod === "frequencyMethod"}
+            />
+            Frequency Method
+          </label>
+          <label>
+            <input
+              type="radio"
+              className="input--method__button"
+              name="selectedMethod"
+              value="textRankMethod"
+              onChange={inputChange}
+              checked={input.selectedMethod === "textRankMethod"}
+            />
+            Text Rank Method
+          </label>
         </div>
-      </form>
+      </div>
+      <button className="input--button" onClick={handleSubmit}>
+        Summarize
+      </button>
     </div>
   );
 }

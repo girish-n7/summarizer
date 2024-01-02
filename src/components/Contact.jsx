@@ -6,7 +6,7 @@ export default function Contact() {
       method="POST"
     >
       <div className="contact--container">
-        <p className="contact--head">CONTACT ME</p>
+        <p className="contact--head">Contact me</p>
         <input
           type="text"
           className="contact--input"
@@ -42,9 +42,9 @@ export default function Contact() {
           required
           autoComplete="false"
         ></textarea>
-        <div className="contact--send">
-          <button type="submit">SEND</button>
-        </div>
+        <button className="contact--btn" type="submit">
+          Send
+        </button>
       </div>
     </form>
   );
